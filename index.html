@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.css"
+    integrity="sha512-NDcw4w5Uk5nra1mdgmYYbghnm2azNRbxeI63fd3Zw72aYzFYdBGgODILLl1tHZezbC8Kep/Ep/civILr5nd1Qw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.js"
+    integrity="sha512-5oYoOmFv0YoHObByCXkMBcpMET8SO/6eiatapAbulYAWknE6AEWZsqIHDM7PU25DpwGjPtfhFGwqjYXAufjOOQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <title>HAN portfolio</title>
+</head>
+
+<body>
+  <section class="home">
+    <header>
+      <div class="toggle"></div>
+      <a href="#" class="logo"><img src="logo.png" alt=""></a>
+    </header>
+    <div class="contents homeContent active">
+      <div class="content">
+        <img src="portfolio.png" class="textimg">
+        <p>Welcome ! HAN'S PORTFOLIO<br />
+          Thank you for visiting.</p>
+        <a href="#" class="btn"><ion-icon name="play-circle-outline"></ion-icon>Watch Trailer</a>
+      </div>
+      <div class="clip">
+        <div class="youtube clipBox">
+          <a href="https://youtu.be/ADyazK7btX4?si=avCbMDoXpiETYiYO" data-lity>
+            <img src="img1.jpg">
+            <ion-icon name="play-circle-outline"></ion-icon>
+          </a>
+        </div>
+        <div class="youtube clipBox">
+          <a href="https://youtu.be/lFMobna17QU?si=vx1pKei_A-Ndaz_7" data-lity>
+            <img src="img2.jpg">
+            <ion-icon name="play-circle-outline"></ion-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="contents profileContent">
+      <div class="content">
+        <img src="profile.png" class="textimg">
+        <div class="myface">
+          <img src="./face.jpg" alt="">
+        </div>
+        <h3>名前：韓　尚喜(ハン　サンヒ)</h3>
+        <br />
+        <br>韓国生まれ、日本在２１年目<br />
+        音楽専門学校作曲学科卒業後、PCスキルを活かしてIT業界へ転職<br />
+        フロント側＆バック側の経験多<br /><br />
+        趣味：PC作業、映画鑑賞、DIY<br />
+        得意分野：Web制作(html5,css,photoshop,illustrator)<br />
+        興味＆勉強中の分野(~ing)：AdobeXD,React(framework)
+        </p>
+        <a href="tel:08078333106"><ion-icon name="call-outline"></ion-icon>08078333106</a>
+      </div>
+      <div class="map">
+        <p>最寄り駅</p>
+        <div class="map-content">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3233.0397748827654!2d140.03833387626457!3d35.87254211944019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6022778b14bfa8cf%3A0xdc965343299dbc25!2z5aSp546L5Y-w6aeF!5e0!3m2!1sja!2sjp!4v1709540767633!5m2!1sja!2sjp"
+            width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="contents historyContent">
+      <div class="content">
+        <img src="history.png" class="textimg">
+
+
+        </p>
+      </div>
+    </div>
+    <div class="contents contactContent">
+      <div class="content">
+        <img src="contact.png" class="textimg">
+      </div>
+    </div>
+
+    <ul class="socialIcon">
+      <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+      <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+      <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+    </ul>
+  </section>
+
+  <ul class="navigation">
+    <li><a href="javascript:toHome();">HOME</a></li>
+    <li><a href="javascript:profile();">PROFILE</a></li>
+    <li><a href="javascript:history();">HISTORY</a></li>
+    <li><a href="javascript:contact();">Contact</a></li>
+  </ul>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script>
+    let menuToggle = document.querySelector('.toggle');
+    let navigation = document.querySelector('.navigation');
+    let section = document.querySelectorAll('.contents');
+    let home = document.querySelector('.home');
+    const imgTarget = ['bghistory.jpg', 'bgcontact.jpg', 'bg.jpg', 'bgprofile.jpg'];
+    var i = 0;
+    var timeId = "";
+    window.onload = () => {
+      timeId = setInterval(() => {
+        $('.home').css('background-image', `url(${imgTarget[i]})`);
+        i++;
+        if (i === 3) {
+          i = 0;
+        }
+        console.log(i);
+      }, 4000)
+    }
+    // timeId = ;
+    menuToggle.onclick = () => {
+      $('.toggle').toggleClass('active');
+      $('.navigation').toggleClass('active');
+    }
+    const toHome = () => {
+      clearInterval(timeId);
+      $('.contents').removeClass('active');
+      $('.home').css('background-image', 'url(bg.jpg)');
+      $('.toggle').toggleClass('active');
+      $('.navigation').toggleClass('active');
+      $('.homeContent').addClass('active');
+    }
+    const profile = () => {
+      $('.toggle').toggleClass('active');
+      $('.contents').removeClass('active');
+      $('.navigation').toggleClass('active');
+      $('.home').css('background-image', 'url(bgprofile.jpg)');
+      $('.profileContent').addClass('active');
+
+
+    }
+    const history = () => {
+      $('.toggle').toggleClass('active');
+      $('.contents').removeClass('active');
+      $('.navigation').toggleClass('active');
+      $('.home').css('background-image', 'url(bghistory.jpg)');
+      $('.historyContent').addClass('active');
+    }
+    const contact = () => {
+      $('.toggle').toggleClass('active');
+      $('.contents').removeClass('active');
+      $('.navigation').toggleClass('active');
+      $('.home').css('background-image', 'url(bgcontact.jpg)');
+      $('.contactContent').addClass('active');
+    }
+  </script>
+</body>
+
+</html>
