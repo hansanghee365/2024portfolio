@@ -5,8 +5,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="style.css">
   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lity/2.4.1/lity.css"
@@ -31,7 +29,7 @@
     </header>
     <div class="contents homeContent active">
       <div class="content youtube">
-        <img src="portfolio.png" class="textimg">
+        <img src="./img/portfolio.png" class="textimg">
         <p>
           <span class="underline_before">Welcome ! HAN'S PORTFOLIO<br />
             Thank you for visiting.</span>
@@ -42,13 +40,13 @@
       <div class="clip">
         <div class="youtube clipBox">
           <a href="https://youtu.be/ADyazK7btX4?si=avCbMDoXpiETYiYO" data-lity>
-            <img src="img1.jpg">
+            <img src="./img/img1.jpg">
             <ion-icon name="play-circle-outline"></ion-icon>
           </a>
         </div>
         <div class="youtube clipBox">
           <a href="https://youtu.be/lFMobna17QU?si=vx1pKei_A-Ndaz_7" data-lity>
-            <img src="img2.jpg">
+            <img src="./img/img2.jpg">
             <ion-icon name="play-circle-outline"></ion-icon>
           </a>
         </div>
@@ -56,9 +54,9 @@
     </div>
     <div class="contents profileContent">
       <div class="content">
-        <img src="profile.png" class="textimg">
+        <img src="./img/profile.png" class="textimg">
         <div class="myface">
-          <img src="./face.jpg" alt="">
+          <img src="./img/face.jpg" alt="">
         </div>
         <h3>名前：韓　尚喜(ハン　サンヒ)</h3>
         <br />
@@ -84,7 +82,7 @@
     </div>
     <div class="contents historyContent">
       <div class="content">
-        <img src="history.png" class="textimg">
+        <img src="./img/history.png" class="textimg">
         <p>
           <span class="underline_before">直近の職務経歴です。<br />
             You can see it when mouover.</span>
@@ -145,7 +143,7 @@
     </div>
     <div class="contents contactContent">
       <div class="content">
-        <img src="contact.png" class="textimg">
+        <img src="./img/contact.png" class="textimg">
         <h3>韓　尚喜(ハン　サンヒ)</h3>
         <p>
           <span class="underline_before"><a href="mailto:info@example.com">Mail:hansanghee365@gmail.com</a>
@@ -153,31 +151,34 @@
         </p>
       </div>
       <div class="contact">
-        <div class="Form">
-          <div class="Form-Item">
-            <p class="Form-Item-Label">
-              <span class="Form-Item-Label-Required">必須</span>会社名
-            </p>
-            <input type="text" class="Form-Item-Input" placeholder="例）株式会社〇〇">
+        <form action="#" method="POST">
+          <div class="Form">
+            <div class="Form-Item">
+              <p class="Form-Item-Label">
+                <span class="Form-Item-Label-Required">必須</span>会社名
+              </p>
+              <input type="text" class="Form-Item-Input" placeholder="例）株式会社〇〇" required>
+            </div>
+            <div class="Form-Item">
+              <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>氏名</p>
+              <input type="text" class="Form-Item-Input" placeholder="例）山田太郎" required>
+            </div>
+            <div class="Form-Item">
+              <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>電話番号</p>
+              <input type="text" class="Form-Item-Input" placeholder="例）000-0000-0000" required>
+            </div>
+            <div class="Form-Item">
+              <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>メールアドレス</p>
+              <input type="email" class="Form-Item-Input" placeholder="例）example@gmail.com"
+                pattern=@"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" required>
+            </div>
+            <div class="Form-Item">
+              <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
+              <textarea class="Form-Item-Textarea" required></textarea>
+            </div>
+            <input type="submit" class="Form-Btn" value="送信">
           </div>
-          <div class="Form-Item">
-            <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>氏名</p>
-            <input type="text" class="Form-Item-Input" placeholder="例）山田太郎">
-          </div>
-          <div class="Form-Item">
-            <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>電話番号</p>
-            <input type="text" class="Form-Item-Input" placeholder="例）000-0000-0000">
-          </div>
-          <div class="Form-Item">
-            <p class="Form-Item-Label"><span class="Form-Item-Label-Required">必須</span>メールアドレス</p>
-            <input type="email" class="Form-Item-Input" placeholder="例）example@gmail.com">
-          </div>
-          <div class="Form-Item">
-            <p class="Form-Item-Label isMsg"><span class="Form-Item-Label-Required">必須</span>お問い合わせ内容</p>
-            <textarea class="Form-Item-Textarea"></textarea>
-          </div>
-          <input type="submit" class="Form-Btn" value="送信">
-        </div>
+        </form>
       </div>
 
     </div>
@@ -201,6 +202,7 @@
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script>
+    /*pw検証*/
     // let userInput = prompt("パスワードを入力して下さい。");
     // const today = new Date();
     // const year = today.getFullYear();
@@ -211,6 +213,14 @@
     //   location.href = userInput + ".html";
     // }
 
+    /* form イベント停止 */
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+    });
+
+    /* bgslide */
     let menuToggle = document.querySelector('.toggle');
     let navigation = document.querySelector('.navigation');
     let section = document.querySelectorAll('.contents');
@@ -225,9 +235,9 @@
         if (i === 4) {
           i = 0;
         }
-        console.log(i);
       }, 4000)
     }
+    /* 各ボタンToggle */
     menuToggle.onclick = () => {
       $('.toggle').toggleClass('active');
       $('.navigation').toggleClass('active');
