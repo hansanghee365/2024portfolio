@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
+  font-family: 'Dosis', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
 }
 .home{
   min-height: 100vh;
@@ -129,6 +129,30 @@ header{
   font-size: 1.2em;
   line-height: 1.75em;
   font-weight: 300;
+  margin-bottom: 20px;
+}
+.skill_list{
+  max-width: 600px;
+}
+.skill_list ul{
+  display: flex;
+}
+.skill_list ul li{
+  list-style: none;
+}
+.skill_list ul li a img{
+  width: 100%;
+  transition: all 0.5s;
+}
+.skill_list ul li a img:hover{
+  transform:scale(1.2,1.2);
+  mix-blend-mode: difference;
+}
+.skill_list ul li a img:hover + p{
+  display: block;
+}
+.red{
+  color: red;
 }
 .btn{
   position: relative;
@@ -220,8 +244,8 @@ header{
 /* profileContent */
 .myface{
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   margin: 0 auto;
   margin-bottom: 40px;
 }
@@ -235,18 +259,30 @@ header{
 .myface img:hover{
   transform: rotate(-45deg);
 }
+.profileContent a{
+  display: inline;
+}
+.profileContent a:hover{
+  color: red;
+}
 .profileContent .content p{
   text-align: center;
   margin-bottom: 20px;
 }
-.profileContent a,.contactContent a{
+.contactContent a{
   align-items: center;
   text-decoration: none;
   display: flex;
   color: #fff;
 }
-.profileContent .content a ion-icon{
-  font-size: 2em;
+.profileContent a{
+  text-decoration: none;
+  color: #fff;
+}
+.profileContent a ion-icon{
+  position: relative;
+  top: 1px;
+  font-size: 1em;
   align-items: center;
 }
 .contactContent a:hover{
@@ -281,7 +317,7 @@ header{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  text-align: center;
+  /* text-align: center; */
   gap: 20px;
   width: 750px;
 }
@@ -453,7 +489,7 @@ header{
 
 .box{
   font-family: 'Poppins', sans-serif;
-  text-align: center;
+  /* text-align: center; */
   overflow: hidden;
   position: relative;
   border-radius: 6px;
@@ -496,7 +532,7 @@ header{
 }
 .box .box-content{
   width: 100%;
-  text-align: center;
+  /* text-align: center; */
   opacity: 0;
   transform: translateY(50px);
   position: absolute;
@@ -526,7 +562,7 @@ header{
   color: #fff;
   font-size: 13px;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 .box .icon{
@@ -582,11 +618,11 @@ header{
     position: relative;
     right: initial;
     bottom: initial;
-    margin: 40px 0;
+    /* margin: 40px 0; */
     width: 100%;
   }
   .historyContent .content{
-    margin-top: 150px;
+    /* margin-top: 150px; */
   }
   .history{
     font-size: 9px;
